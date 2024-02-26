@@ -1,89 +1,149 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
-    font-family: "Red Hat Text", sans-serif;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Red Hat Text", sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
-    font-size: 90px;
-    font-weight: 700;
-    color: hsl(345, 95%, 68%);
+  font-size: 90px;
+  font-weight: 700;
+  color: hsl(345, 95%, 68%);
+}
+
+h2 {
+  margin-top: -45px;
+  font-size: 22px;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 10px;
+  font-weight: 695;
+}
+
+p {
+  color: hsl(237, 18%, 59%);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 5px;
 }
 
 #main {
-    width: 100%;
-    height: 100%;
-    background-color: hsl(234, 17%, 12%);
-    display: flex;
-    flex-direction: column;
-    color: azure;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(234, 17%, 12%);
+  display: flex;
+  flex-direction: column;
 }
-
 
 main {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    background-image: url(./images/bg-stars.svg);
-    background-repeat: no-repeat;
-    background-size: auto;
-}
-
-main h2 {
-    margin-top: -60px;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-image: url(/launch-countdown-timer-main/images/bg-stars.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 125px;
+}
+
+.whole-card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .card {
-    width: 170px;
-    height: 160px;
+  width: 170px;
+  height: 160px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card .circle-1 {
+  width: 14px;
+  height: 14px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+}
+
+.card .circle-2 {
+  width: 14px;
+  height: 14px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
 }
 
 .card-top {
-    height: 50%;
-    width: 100%;
-    background-color: hsl(236, 26%, 21%);
-    border-top-right-radius: 7px;
-    border-top-left-radius: 7px;
-    border-bottom: 1px solid hsl(240, 27%, 17%);
-
+  height: 50%;
+  width: 100%;
+  background-color: hsl(236, 26%, 21%);
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+  border-bottom: 1px solid hsl(240, 28%, 14%);
 }
-
 
 .card-bottom {
-    height: 50%;
-    width: 100%;
-    background-color: hsl(236, 21%, 26%);
-    border-bottom-right-radius: 7px;
-    border-bottom-left-radius: 7px;
+  height: 50%;
+  width: 100%;
+  background-color: hsl(236, 21%, 26%);
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
 }
 
-
 footer {
-    width: 100%;
-    height: 20%;
-    background-image: url(./images/pattern-hills.svg);
-    background-repeat: no-repeat;
-    background-size: auto;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/launch-countdown-timer-main/images/pattern-hills.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
 
+footer .logos {
+  letter-spacing: 25px;
+}
+
+svg {
+  color: #8385a9;
+  transition: all 200ms;
+  cursor: pointer;
+}
+
+svg:hover {
+  color: hsl(345, 95%, 68%);
 }
