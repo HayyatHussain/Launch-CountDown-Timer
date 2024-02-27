@@ -25,10 +25,22 @@ const countDown = () => {
         }
       }
     }
-    day.innerText = dayText;
-    hour.innerText = hourText;
-    min.innerText = minText;
-    sec.innerText = secText;
+    day.innerText = `0${dayText}`;
+    if (toString(hourText.length) == 1) {
+      hour.innerText = `0${hourText}`;
+    } else {
+      hour.innerText = hourText;
+    }
+    if (toString(minText).length == 1) {
+      min.innerText = `0${minText}`;
+    } else {
+      min.innerText = minText;
+    }
+    if (toString(secText).length == 1) {
+      sec.innerText = `0${secText}`;
+    } else {
+      sec.innerText = secText;
+    }
   }, 1000);
 };
 
