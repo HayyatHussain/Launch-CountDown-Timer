@@ -21,26 +21,15 @@ const countDown = () => {
           dayText--;
           if (dayText < 0) {
             clearInterval(myInterval);
+            return;
           }
         }
       }
     }
-    day.innerText = `0${dayText}`;
-    if (toString(hourText.length) == 1) {
-      hour.innerText = `0${hourText}`;
-    } else {
-      hour.innerText = hourText;
-    }
-    if (toString(minText).length == 1) {
-      min.innerText = `0${minText}`;
-    } else {
-      min.innerText = minText;
-    }
-    if (toString(secText).length == 1) {
-      sec.innerText = `0${secText}`;
-    } else {
-      sec.innerText = secText;
-    }
+    day.innerText = dayText.toString().padStart(2, "0");
+    hour.innerText = hourText.toString().padStart(2, "0");
+    min.innerText = minText.toString().padStart(2, "0");
+    sec.innerText = secText.toString().padStart(2, "0");
   }, 1000);
 };
 
